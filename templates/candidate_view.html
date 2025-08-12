@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Video Interview</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Initial view: Role input form -->
+      <div id="welcome-section">
+        <div class="header">
+          <h1>AI-Powered Video Interview</h1>
+          <p>Please enter the role you are applying for to begin.</p>
+        </div>
+        <form id="role-form">
+          <!-- FIX: Added name="role_title" -->
+          <input
+            type="text"
+            id="role-title"
+            name="role_title"
+            placeholder="Enter Role Title (e.g., 'Senior Python Developer')"
+            required
+          />
+          <!-- FIX: Added name="role_description" -->
+          <textarea
+            id="role-description"
+            name="role_description"
+            rows="6"
+            placeholder="Paste the full Role Description here"
+            required
+          ></textarea>
+          <button type="submit" id="start-btn">Start Interview</button>
+        </form>
+      </div>
+
+      <!-- Interview view: Hidden by default -->
+      <div id="interview-section" class="hidden">
+        <div id="introduction-container">
+          <h2>Introduction</h2>
+          <p id="introduction-text" class="ai-content"></p>
+        </div>
+        <hr />
+        <div id="question-container">
+          <h3 id="question-text"></h3>
+          <video
+            id="video-preview"
+            width="100%"
+            autoplay
+            muted
+            playsinline
+          ></video>
+          <div class="controls">
+            <button id="record-btn">Start Recording</button>
+            <button id="next-btn" class="hidden">Submit & Next Question</button>
+          </div>
+          <p id="status-text"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="/static/main.js"></script>
+  </body>
+</html>

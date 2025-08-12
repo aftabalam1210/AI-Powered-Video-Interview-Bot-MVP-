@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruiter Report</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Interview Report</h1>
+        <h2>Role: {{ role_title }}</h2>
+      </div>
+      <div class="report-container">
+        <!-- The 'pre' tag preserves whitespace and formatting from the AI's response -->
+        <pre>{{ evaluation }}</pre>
+      </div>
+      <div class="footer">
+        <a href="/" class="button-link">Start New Interview</a>
+      </div>
+    </div>
+  </body>
+</html>
